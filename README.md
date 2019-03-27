@@ -71,3 +71,32 @@
         1. FETCH: Limits the number of rows that are returned from the result set
         2. OFFSET: Sets the number of rows to skip before returning the number of rows set using FETCH
         3. The **ORDER BY** clause is required when using FETCH and OFFSET
+## Table Relationships
+1. Normalization is the term that is used to describe the process of separating data into multiple, related tables.
+    1. Makes concurrent connections more efficient
+    2. Makes table management more efficient
+    3. Makes data storage more efficient
+2. Primary key and foreign key
+3. Join: inner join, outer join, cross join
+    1. inner join, the default type
+    2. outer join: left join, right join, full join
+    3. cross join: each row from the left table is combined with all rows from the right table
+4. Table aliasing: usually 4 letters or less
+
+## Built-in functions: MAX, MIN, AVE, SUM, etc
+1. T-SQL provides two main tools for data aggregation 
+    1. Functions: built-in and user defined
+    2. GROUP BY: performs aggregations at the row level in a result set
+2. GROUPING SETS: defines multiple grouping sets in the same query.
+3. Grouping function indicates a specified column in a GROUP BY clause is aggregated or not, it returns 1 for aggregation or 0 for not aggregated in the result set.
+
+## Graphical Query Tool: can be used to build query and visualize query structure
+
+## Modifying Data:
+1. INSERT
+2. INSERT SELECT statement: data values retrieved by the SELECT statement must match the column list of the INSERT statement
+3. SELECT INTO: creates a new table in the default filegroup and inserts the resulting rows from the query into the new table
+    1. Create a new table 
+    2. Indexes, constraints, and triggers defined in the source table are not transferred to the new table
+4. Update: is processed as a DELETE, INSERT by SQL Server, all columns in the row are affected by the UPDATE statement
+5. Delete and Truncate
