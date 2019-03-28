@@ -100,3 +100,34 @@
     2. Indexes, constraints, and triggers defined in the source table are not transferred to the new table
 4. Update: is processed as a DELETE, INSERT by SQL Server, all columns in the row are affected by the UPDATE statement
 5. Delete and Truncate
+
+## Programming objects in T-SQL
+1. Stored procedure: input, output
+    1. Reduced network traffic
+    2. High performance
+    3. Strong security: must have permission
+    4. Easier maintenance 
+2. Variable table
+3. CTE
+4. User defined functions:
+    1. Scalar functions are often executed once for every row in a result set
+    2. Table-valued function: returns a table as a result set, and the returned table can be referenced in the FROM clause of a T-SQL statement, while a stored procedure cannot be referenced in the FROM statement
+5. Dynamic Data Masking: 
+    1. Protects data during presentation as part of a T-SQL result set
+    2. Does not require resources to perform encryption/decryption
+    3. is applied at the column level when the table is created
+        1. Users with SELECT permissions on a table will see masked data, and granting the UNMASK permission to a user allows them to see the data unmasked
+        2. Can be defined using four rule types: default, email, random, custom
+            1. Default: all data is automatically masked based on the data type of the field
+            2. Email: Exposes the first letter of an email address and the constant suffix ".com": aXXX@XXX.com
+            3. Random: used on any numeric type to apply masking within a specified range
+            4. Custom: exposes the first and last letters and adds a custom masking in the middle 
+
+## Subqueries (Outer query (main), inner query (sub) )
+1. Scalar subquery
+2. Multi-valued subquery
+3. Table-valued subquery
+4. Non-correlated subqueries executed the subquery once and the resulting values are used by the WHERE clause of the outer query
+5. Correlated subqueries: the subquery depends on the outer query for its values
+    1. is a repeating subquery
+    2. is executed repeatedly, once for each row that might be selected by the outer query
