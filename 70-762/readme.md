@@ -13,3 +13,8 @@
         1. Every database has a primary filegroup
         2. Secondary data files can be placed in these filegroups
 2. Data integrity is a major concern when creating and managing database tables
+3. Tables in different schemas can have the same name the the same database
+    1. Database objects are owned by schemas
+    2. Permissions can be set at the schema level
+    3. Objects can be easily moved from one schema to another
+4. ALTER TABLE: SSMS creates a new table, inserts the data from the original table, then drops the old table and renames the new table to match the old table
