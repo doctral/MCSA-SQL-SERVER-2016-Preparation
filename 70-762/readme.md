@@ -18,3 +18,8 @@
     2. Permissions can be set at the schema level
     3. Objects can be easily moved from one schema to another
 4. ALTER TABLE: SSMS creates a new table, inserts the data from the original table, then drops the old table and renames the new table to match the old table
+5. In SQL Server, we can address data integrity at three levels:
+    1. Domain integrity: refers to the values in each column, including data types, and constraints
+    2. Entity integrity: requires that all rows in the table be unique by using primary key and unique constraints
+    3. Referential integrity: maintains relationships between tables by using foreign keys on one table related to the primary key or unique key of another table
+6. Constraints: primary key, unique, foreign key, check, default
