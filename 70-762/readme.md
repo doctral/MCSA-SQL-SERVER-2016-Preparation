@@ -23,3 +23,4 @@
     2. Entity integrity: requires that all rows in the table be unique by using primary key and unique constraints
     3. Referential integrity: maintains relationships between tables by using foreign keys on one table related to the primary key or unique key of another table
 6. Constraints: primary key, unique, foreign key, check, default
+    1. Unique keys can also reference unique constraints
