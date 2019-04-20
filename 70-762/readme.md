@@ -108,3 +108,34 @@
 3. Indexed Views: Indexes can be created on views and provide certain benefits
 
 ## Transaction
+1. Help ensure data integrity
+2. ACID: Atomicity, Consistency, Isolation, and Durability
+3. Implicity transaction: all individual statement are treated as transactions, and SQL Server automatically commits the transaction as soon as the statement successfully completes.
+    1. **Implicit transactions** setting is off by default
+    2. If the option is **on**, all transactions must be manually committed or rolled back, and uncommitted transactions are removed from the transaction log when the SQL Server is restarted
+4. Explicity Transactions: the start and end of the transaction are explicitly defined in the T-SQL code
+5. Every SQL Server database has Transaction log, all data modifications are written to the transaction log as part of a transaction.
+6. Savepoints: provide the ability to control the scope of a transaction rollback
+    1. Savepoints are useful in situations where errors are unlikely to occur
+    2. Updates and rollbacks are expensive operations
+    3. A savepoints is created using the **SAVE TRANSACTION** statement, and with **ROLLBACK TRANSACTION <savepoint>**, it rolls the transaction back to the savepoint, instead of rolling back to the start of the transaction.
+
+## Stored Procedures
+1. Benefits:
+    1. Reduced network traffic
+    2. Compiled once and executed the same later
+    3. Stronger security: must have permission to exec a proc
+    4. Improved performance
+2. Table-valued parameters in Stored Procedures
+3. Return Status: whenever a stored procedure is executed, SQL Server automatically generated a status code, 0 indicates success, and other code indicates a system error
+4. Natively compiled stored procedures: compiled at creation, can be executed directly by CPU.
+
+## Triggers: a special kind of stored procedure
+1. Triggers can operate cross-database
+    1. Can reference objects outside the current database
+2. Instead of triggers
+3. After triggers
+
+## Functions
+1. Scalar Functions
+2. Table-valued functions
