@@ -1,6 +1,7 @@
 # AZ-103: Microsoft Azure Administrator
 
 ## Useful Resources
+1. [How to access Azure SQL Server from local](https://stackoverflow.com/questions/11617687/cannot-connect-to-azure-sql-database-even-with-whitelisted-ip)
 
 ## Three Core Services in Azure
 1. Virtual Machines - VMs - IaaS
