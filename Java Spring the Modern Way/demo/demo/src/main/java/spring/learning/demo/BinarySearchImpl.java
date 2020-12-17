@@ -2,7 +2,16 @@ package spring.learning.demo;
 
 public class BinarySearchImpl {
 	
+	private SortAlgorithm sortAlgo;
+	
+	public BinarySearchImpl(SortAlgorithm algo) {
+		sortAlgo = algo;
+	}
+	
 	public int binarySearch(int[] arr, int target) {
+		
+		arr = sortAlgo.sort(arr);
+		
 		int left=0, right = arr.length-1;
 		while(left<=right) {
 			int mid = (right+left)/2;
